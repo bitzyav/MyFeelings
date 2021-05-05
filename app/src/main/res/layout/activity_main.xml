@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/graph">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="How do you feel today?"
+                android:id="@+id/question"
+                />
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:id="@+id/options"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/very_sad_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_very_sad" />
+
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/ic_sad"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/sad_btn"
+                    />
+
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/ic_neutral"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/neutral_btn"
+                    />
+
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/ic_happy"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/happy_btn"
+                    />
+
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/ic_very_happy"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/very_happy_btn"
+                    />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="@color/white"
+                android:text="Save"
+                android:id="@+id/save_btn"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:id="@+id/bar_graphs"
+                android:columnCount="2"
+                android:layout_marginLeft="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
+                    android:text="Very happy"
+                    android:layout_marginRight="15dp"
+                    />
+
+                <View
+                    android:layout_height="20dp"
+                    android:layout_width="250dp"
+                    android:id="@+id/graph_very_happy"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
+                    android:text="Happy"
+                    android:layout_marginRight="15dp"
+                    />
+
+                <View
+                    android:layout_height="20dp"
+                    android:layout_width="250dp"
+                    android:id="@+id/graph_happy"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
+                    android:text="Neutral"
+                    android:layout_marginRight="15dp"
+                    />
+
+                <View
+                    android:layout_height="20dp"
+                    android:layout_width="250dp"
+                    android:id="@+id/graph_neutral"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
+                    android:text="Sad"
+                    android:layout_marginRight="15dp"
+                    />
+
+                <View
+                    android:layout_height="20dp"
+                    android:layout_width="250dp"
+                    android:id="@+id/graph_sad"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
+                    android:text="Very sad"
+                    android:layout_marginRight="15dp"
+                    />
+
+                <View
+                    android:layout_height="20dp"
+                    android:layout_width="250dp"
+                    android:id="@+id/graph_very_sad"
+                    />
+
+            </GridLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
